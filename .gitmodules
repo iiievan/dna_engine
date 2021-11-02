@@ -1,0 +1,3 @@
+[submodule "dna_engine/vendor/spdlog"]
+	path = dna_engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
