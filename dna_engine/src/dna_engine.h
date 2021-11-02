@@ -4,5 +4,6 @@
 
 #include <stdio.h>
 #include "dna_engine/Application.h"
+#include "dna_engine/Log.h"
 
 #include "dna_engine/EntryPoint.h"		// <- entry point for application

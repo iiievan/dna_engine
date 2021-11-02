@@ -59,6 +59,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>DNAE_PLATFORM_WINDOWS;DNAE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)dna_engine\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,12 +84,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\dna_engine\Log.h" />
     <ClInclude Include="src\dna_engine.h" />
     <ClInclude Include="src\dna_engine\Application.h" />
     <ClInclude Include="src\dna_engine\Core.h" />
     <ClInclude Include="src\dna_engine\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\dna_engine\Log.cpp" />
     <ClCompile Include="src\dna_engine\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

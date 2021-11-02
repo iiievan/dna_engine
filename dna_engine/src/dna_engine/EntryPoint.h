@@ -6,7 +6,11 @@ extern dna_engine::Application* dna_engine::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	printf("DNA engine started.");
+	int a = 5;
+
+	dna_engine::Log::Init();
+	LOG_CORE_INFO("Initialized Log!");
+	LOG_CORE_WARN("Hello DNA! VAR = {0}", a);
 
 	auto app = dna_engine::CreateApplication();
 
