@@ -1,5 +1,6 @@
 #pragma once
 
+#include "dnae_pch.h"
 #include "dna_engine/Core.h"
 
 namespace dna_engine 

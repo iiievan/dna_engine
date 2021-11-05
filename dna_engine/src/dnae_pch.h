@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "dna_engine/Log.h"
+
 #ifdef DNAE_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif //DNAE_PLATFORM_WINDOWS
