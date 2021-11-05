@@ -2,9 +2,6 @@
 
 #include "dna_engine/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace dna_engine 
 {
 

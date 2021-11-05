@@ -4,6 +4,9 @@
     <Filter Include="dna_engine">
       <UniqueIdentifier>{AD2AAFE0-99E2-F02D-02EA-C989EEC08B1E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="dna_engine\Events">
+      <UniqueIdentifier>{F171AEA6-5D88-AC3C-A6FF-375E12557DC4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dna_engine.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\dna_engine\EntryPoint.h">
       <Filter>dna_engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\dna_engine\Events\ApplicationEvent.h">
+      <Filter>dna_engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dna_engine\Events\Event.h">
+      <Filter>dna_engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dna_engine\Events\KeyEvent.h">
+      <Filter>dna_engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dna_engine\Events\MouseEvent.h">
+      <Filter>dna_engine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\dna_engine\Log.h">
       <Filter>dna_engine</Filter>
     </ClInclude>
-    <ClInclude Include="src\dna_engine\Events\Event.h" />
-    <ClInclude Include="src\dna_engine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\dna_engine\Events\KeyEvent.h" />
-    <ClInclude Include="src\dna_engine\Events\MouseEvent.h" />
+    <ClInclude Include="src\dnae_pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dna_engine\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\dna_engine\Log.cpp">
       <Filter>dna_engine</Filter>
     </ClCompile>
+    <ClCompile Include="src\dnae_pch.cpp" />
   </ItemGroup>
 </Project>

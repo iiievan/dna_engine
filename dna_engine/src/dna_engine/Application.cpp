@@ -1,3 +1,5 @@
+#include "dnae_pch.h"
+
 #include "Application.h"
 
 #include "dna_engine/Events/ApplicationEvent.h"
@@ -18,7 +20,10 @@ namespace dna_engine
 	void Application::Run()
 	{
 		WindowResizeEvent e(1280, 720);
-		DNAE_TRACE(e.ToString());
+		if(e.IsInCategory(EventCategoryApplication))
+			DNAE_TRACE(e);
+		if (e.IsInCategory(EventCategoryKeyboard))
+			DNAE_TRACE(e);
 
 		while (true)
 		{

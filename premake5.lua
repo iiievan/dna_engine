@@ -18,6 +18,9 @@ project "dna_engine"
     targetdir ("bin/" ..outputdir.. "/%{prj.name}")
     objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
 
+    pchheader "dnae_pch.h"
+    pchsource "dna_engine/src/dnae_pch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",

@@ -1,3 +1,4 @@
+#include"dnae_pch.h"
 #include<dna_engine.h>
 
 class Sandbox : public dna_engine::Application
