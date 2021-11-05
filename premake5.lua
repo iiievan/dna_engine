@@ -26,13 +26,14 @@ project "dna_engine"
 
     includedirs
     {
-        "dna_engine/vendor/spdlog/include"
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include"
     }
 
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
-        systemversion "10.0.19041.0"
+        systemversion "latest"
     defines 
     { 
         "DNAE_PLATFORM_WINDOWS",
@@ -72,8 +73,8 @@ project "Sandbox"
 
     includedirs
     {
-        "dna_engine/vendor/spdlog/include",
-        "dna_engine/src"
+        "dna_engine/src", 
+        "dna_engine/vendor/spdlog/include"       
     }
 
     links
@@ -84,7 +85,7 @@ project "Sandbox"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
-        systemversion "10.0.19041.0"
+        systemversion "latest"
     defines 
     { 
         "DNAE_PLATFORM_WINDOWS"

@@ -19,6 +19,10 @@
     <ClInclude Include="src\dna_engine\Log.h">
       <Filter>dna_engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\dna_engine\Events\Event.h" />
+    <ClInclude Include="src\dna_engine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\dna_engine\Events\KeyEvent.h" />
+    <ClInclude Include="src\dna_engine\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dna_engine\Application.cpp">

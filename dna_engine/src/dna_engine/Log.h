@@ -4,6 +4,7 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace dna_engine 
 {
@@ -28,9 +29,9 @@ namespace dna_engine
 #define	LOG_CORE_FATAL(...)		::dna_engine::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // for client
-#define	LOG_CLIENT_TRACE(...)		::dna_engine::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define	LOG_CLIENT_INFO(...)		::dna_engine::Log::GetClientLogger()->info(__VA_ARGS__)
-#define	LOG_CLIENT_WARN(...)		::dna_engine::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define	LOG_CLIENT_ERROR(...)		::dna_engine::Log::GetClientLogger()->error(__VA_ARGS__)
-#define	LOG_CLIENT_FATAL(...)		::dna_engine::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define	DNAE_TRACE(...)		::dna_engine::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define	DNAE_INFO(...)		::dna_engine::Log::GetClientLogger()->info(__VA_ARGS__)
+#define	DNAE_WARN(...)		::dna_engine::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define	DNAE_ERROR(...)		::dna_engine::Log::GetClientLogger()->error(__VA_ARGS__)
+#define	DNAE_FATAL(...)		::dna_engine::Log::GetClientLogger()->critical(__VA_ARGS__)
 

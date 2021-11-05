@@ -10,3 +10,5 @@
 	#error dna engine only supports windows!
 #endif // DNAE_PLATFORM_WINDOWS
 
+#define BIT(x) (1 << x)
+
