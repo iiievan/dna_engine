@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,6 +110,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,6 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -158,6 +161,8 @@
     <ClInclude Include="src\dna_engine\Events\Event.h" />
     <ClInclude Include="src\dna_engine\Events\KeyEvent.h" />
     <ClInclude Include="src\dna_engine\Events\MouseEvent.h" />
+    <ClInclude Include="src\dna_engine\Layer.h" />
+    <ClInclude Include="src\dna_engine\LayerStack.h" />
     <ClInclude Include="src\dna_engine\Log.h" />
     <ClInclude Include="src\dna_engine\Window.h" />
     <ClInclude Include="src\dnae_pch.h" />
@@ -165,6 +170,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\dna_engine\Application.cpp" />
+    <ClCompile Include="src\dna_engine\Layer.cpp" />
+    <ClCompile Include="src\dna_engine\LayerStack.cpp" />
     <ClCompile Include="src\dna_engine\Log.cpp" />
     <ClCompile Include="src\dnae_pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

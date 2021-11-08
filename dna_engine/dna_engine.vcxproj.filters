@@ -40,6 +40,12 @@
     <ClInclude Include="src\dna_engine\Events\MouseEvent.h">
       <Filter>dna_engine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\dna_engine\Layer.h">
+      <Filter>dna_engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dna_engine\LayerStack.h">
+      <Filter>dna_engine</Filter>
+    </ClInclude>
     <ClInclude Include="src\dna_engine\Log.h">
       <Filter>dna_engine</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\dna_engine\Application.cpp">
+      <Filter>dna_engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dna_engine\Layer.cpp">
+      <Filter>dna_engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dna_engine\LayerStack.cpp">
       <Filter>dna_engine</Filter>
     </ClCompile>
     <ClCompile Include="src\dna_engine\Log.cpp">
