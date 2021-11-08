@@ -13,6 +13,8 @@ namespace dna_engine
 	Application::Application()
 	{
 		m_Window = std::unique_ptr<Window>(Window::Create());
+
+		//[EM001.s2] in application after window creation
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 	}
 
@@ -31,6 +33,7 @@ namespace dna_engine
 		}
 	}
 
+	// [EM001.s5]: Callback after the function glfwSetWindowCloseCallback is executed
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
@@ -39,6 +42,7 @@ namespace dna_engine
 		LOG_CORE_TRACE("{0}", e);
 	}
 
+	// [EM001.s6]: Callback after dispatcher dispatch WindowCloseEvent
 	bool Application::OnWindowClose(WindowCloseEvent& e)
 	{
 		m_Running = false;

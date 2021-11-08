@@ -25,7 +25,9 @@ namespace dna_engine
 	class DNAE_API Window
 	{
 	public:
-		using EventCallbackFn = std::function<void(Event&)>;
+		//[EM001.s1]:Make functor(EventCallbackFn) for Ñreate a separate thread for callback function.
+		typedef std::function<void (Event&)> EventCallbackFn;
+		//using EventCallbackFn = std::function<void(Event&)>; //these is equivalent.
 
 		virtual ~Window() {}
 

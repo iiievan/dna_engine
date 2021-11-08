@@ -62,6 +62,8 @@ namespace dna_engine {
 			data.EventCallback(event);
 		});
 
+		//[EM001.s3]: in window init in moment window creation
+		//[EM001.s4]:this function takes long time to run - this is our separate thread
 		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);

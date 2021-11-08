@@ -54,15 +54,16 @@ namespace dna_engine
 	};
 
 	class EventDispatcher
-	{
+	{		
 		template<typename T>
-		using EventFn = std::function<bool(T&)>;
+		using EventFn = std::function<bool(T&)>; //[EM001.s1]: create function object for all types of Events
 	public:
 		EventDispatcher(Event& event)
 			: m_Event(event)
 		{
 		}
 
+		// [EM001.s7]: Dispatcher call callback for all types of event
 		template<typename T>
 		bool Dispatch(EventFn<T> func)
 		{
