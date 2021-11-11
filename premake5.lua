@@ -12,8 +12,10 @@ workspace "dna_engine"
 -- Include directories relative to root folder(solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "dna_engine/vendor/GLFW/include"
+IncludeDir["Glad"] = "dna_engine/vendor/Glad/include"
 
 include "dna_engine/vendor/GLFW"
+include "dna_engine/vendor/Glad"
 
 project "dna_engine"
     location "dna_engine"
@@ -37,12 +39,14 @@ project "dna_engine"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -53,7 +57,8 @@ project "dna_engine"
     defines 
     { 
         "DNAE_PLATFORM_WINDOWS",
-        "DNAE_BUILD_DLL"
+        "DNAE_BUILD_DLL",
+        "GLFW_INCLUDE_NONE"
     }
 
     postbuildcommands
