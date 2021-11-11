@@ -4,3 +4,6 @@
 [submodule "dna_engine/vendor/GLFW"]
 	path = dna_engine/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "dna_engine/vendor/imgui"]
+	path = dna_engine/vendor/imgui
+	url = https://github.com/TheCherno/imgui
