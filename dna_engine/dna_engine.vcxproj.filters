@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -13,8 +16,14 @@
     <Filter Include="dna_engine\Events">
       <UniqueIdentifier>{F171AEA6-5D88-AC3C-A6FF-375E12557DC4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="dna_engine\ImGui">
+      <UniqueIdentifier>{972D0AEE-8326-2940-AC58-0EC598B0084C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\dna_engine\Events\MouseEvent.h">
       <Filter>dna_engine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\dna_engine\ImGui\ImGuiLayer.h">
+      <Filter>dna_engine\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\dna_engine\Layer.h">
       <Filter>dna_engine</Filter>
     </ClInclude>
@@ -55,11 +67,17 @@
     <ClInclude Include="src\dnae_pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\dna_engine\Application.cpp">
       <Filter>dna_engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dna_engine\ImGui\ImGuiLayer.cpp">
+      <Filter>dna_engine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\dna_engine\Layer.cpp">
       <Filter>dna_engine</Filter>

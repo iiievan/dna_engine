@@ -13,9 +13,11 @@ workspace "dna_engine"
 IncludeDir = {}
 IncludeDir["GLFW"] = "dna_engine/vendor/GLFW/include"
 IncludeDir["Glad"] = "dna_engine/vendor/Glad/include"
+IncludeDir["ImGui"] = "dna_engine/vendor/imgui"
 
 include "dna_engine/vendor/GLFW"
 include "dna_engine/vendor/Glad"
+include "dna_engine/vendor/imgui"
 
 project "dna_engine"
     location "dna_engine"
@@ -40,13 +42,15 @@ project "dna_engine"
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
-        "%{IncludeDir.Glad}"
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
 
     links
     {
         "GLFW",
         "Glad",
+        "ImGui",
         "opengl32.lib"
     }
 
