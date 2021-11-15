@@ -65,6 +65,8 @@
       <Filter>dna_engine</Filter>
     </ClInclude>
     <ClInclude Include="src\dnae_pch.h" />
+    <ClInclude Include="src\dna_engine\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
@@ -89,5 +91,6 @@
       <Filter>dna_engine</Filter>
     </ClCompile>
     <ClCompile Include="src\dnae_pch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

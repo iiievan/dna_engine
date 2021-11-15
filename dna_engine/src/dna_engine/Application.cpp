@@ -1,8 +1,8 @@
 #include "dnae_pch.h"
 
-#include "Application.h"
-
+#include "dna_engine/Application.h"
 #include "dna_engine/Log.h"
+#include "dna_engine/Input.h"
 
 #include <glad/glad.h>
 
@@ -50,6 +50,10 @@ namespace dna_engine
 			{
 				layer->OnUpdate();
 			}
+
+			auto [x, y] = Input::GetMousePosition();
+			LOG_CORE_TRACE("{0}, {1}", x, y);
+
 			m_Window->OnUpdate();
 		}
 	}
