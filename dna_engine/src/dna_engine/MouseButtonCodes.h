@@ -1,0 +1,15 @@
+#pragma once
+
+// From glfw.h
+#define DNAE_MOUSE_BUTTON_1         0
+#define DNAE_MOUSE_BUTTON_2         1
+#define DNAE_MOUSE_BUTTON_3         2
+#define DNAE_MOUSE_BUTTON_4         3
+#define DNAE_MOUSE_BUTTON_5         4
+#define DNAE_MOUSE_BUTTON_6         5
+#define DNAE_MOUSE_BUTTON_7         6
+#define DNAE_MOUSE_BUTTON_8         7
+#define DNAE_MOUSE_BUTTON_LAST      DNAE_MOUSE_BUTTON_8
+#define DNAE_MOUSE_BUTTON_LEFT      DNAE_MOUSE_BUTTON_1
+#define DNAE_MOUSE_BUTTON_RIGHT     DNAE_MOUSE_BUTTON_2
+#define DNAE_MOUSE_BUTTON_MIDDLE    DNAE_MOUSE_BUTTON_3

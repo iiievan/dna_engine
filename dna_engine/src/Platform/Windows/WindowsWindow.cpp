@@ -87,6 +87,8 @@ namespace dna_engine {
 				case GLFW_PRESS:
 				{
 					KeyPressedEvent event(key, 0);
+					// if using windows key codes we need use conversion
+					//KeyPressedEvent event(GLFWkeytoDNAEkey(key), 0);
 					data.EventCallback(event);
 					break;
 				}
@@ -94,6 +96,7 @@ namespace dna_engine {
 				case GLFW_REPEAT:
 				{
 					KeyReleasedEvent event(key);
+					//KeyReleasedEvent event(GLFWkeytoDNAEkey(key));
 					data.EventCallback(event);
 					break;
 				}
@@ -101,6 +104,7 @@ namespace dna_engine {
 				case GLFW_RELEASE:
 				{
 					KeyPressedEvent event(key, 1);
+					//KeyPressedEvent event(GLFWkeytoDNAEkey(key), 1);
 					data.EventCallback(event);
 					break;
 				}

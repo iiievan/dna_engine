@@ -67,6 +67,8 @@
     <ClInclude Include="src\dnae_pch.h" />
     <ClInclude Include="src\dna_engine\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\dna_engine\KeyCodes.h" />
+    <ClInclude Include="src\dna_engine\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">

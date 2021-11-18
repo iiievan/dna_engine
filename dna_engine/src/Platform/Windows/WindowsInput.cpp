@@ -14,6 +14,8 @@ namespace dna_engine
 		// static cast because GetNativeWindow() return void pointer
 		auto window = static_cast<GLFWwindow*> (Application::Get().GetWindow().GetNativeWindow());
 		auto state = glfwGetKey(window, keycode);
+		// if using windows key kodes we need use conversion
+		//auto state = glfwGetKey(window, DNAEKeyCodeToGLFWKeyCode(keycode));
 
 		return state == GLFW_PRESS || state == GLFW_REPEAT;
 	}

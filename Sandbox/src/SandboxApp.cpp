@@ -10,12 +10,21 @@ public:
 
 	void OnUpdate() override
 	{
-		DNAE_INFO("ExampleLayer::Update");
+		if(dna_engine::Input::IsKeyPressed(DNAE_KEY_TAB))
+			DNAE_TRACE("Tab Key is Pressed! (poll)");
 	}
 
 	void OnEvent(dna_engine::Event& event) override
 	{
-		DNAE_TRACE("{0}", event);
+		if (event.GetEventType() == dna_engine::EventType::KeyPressed)
+		{
+			dna_engine::KeyPressedEvent& e = (dna_engine::KeyPressedEvent&)event;
+
+			if(e.GetKeyCode() == DNAE_KEY_TAB)
+				DNAE_TRACE("Tab Key is Pressed! (event)");
+
+			DNAE_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 
