@@ -5,7 +5,6 @@
 
 namespace dna_engine 
 {
-
 	// Events are currently blocking, meaning when an event occurs it
 	// immediately gets dispatched and must be dealt with right then an there.
 	// For the future, a better strategy might be to buffer events in an event
@@ -30,6 +29,7 @@ namespace dna_engine
 		EventCategoryMouseButton	= BIT(4)
 	};
 
+// EventType::##type = EventType::type  - concatenation(union); #type = "type"
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType()				  { return EventType::##type; }\
 							  virtual EventType GetEventType() const override { return GetStaticType(); }\
 							virtual const char* GetName()      const override { return #type; }
