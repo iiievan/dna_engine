@@ -1,6 +1,6 @@
 #pragma once
 
-// From glfw.h
+// From glfw3.h
 #define DNAE_MOUSE_BUTTON_1         0
 #define DNAE_MOUSE_BUTTON_2         1
 #define DNAE_MOUSE_BUTTON_3         2

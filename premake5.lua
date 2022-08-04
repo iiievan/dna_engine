@@ -13,9 +13,10 @@ workspace "dna_engine"
 
 -- Include directories relative to root folder(solution directory)
 IncludeDir = {}
-IncludeDir["GLFW"] = "dna_engine/vendor/GLFW/include"
-IncludeDir["Glad"] = "dna_engine/vendor/Glad/include"
+IncludeDir["GLFW"]  = "dna_engine/vendor/GLFW/include"
+IncludeDir["Glad"]  = "dna_engine/vendor/Glad/include"
 IncludeDir["ImGui"] = "dna_engine/vendor/imgui"
+IncludeDir["glm"]   = "dna_engine/vendor/glm"
 
 include "dna_engine/vendor/GLFW"
 include "dna_engine/vendor/Glad"
@@ -37,7 +38,10 @@ project "dna_engine"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/glm/glm/**.hpp",
+        "%{prj.name}/vendor/glm/glm/**.inl",
+
     }
 
     includedirs
@@ -46,7 +50,8 @@ project "dna_engine"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
     }
 
     links
@@ -106,7 +111,8 @@ project "Sandbox"
     includedirs
     {
         "dna_engine/src", 
-        "dna_engine/vendor/spdlog/include"       
+        "dna_engine/vendor/spdlog/include",
+        "%{IncludeDir.glm}"         
     }
 
     links

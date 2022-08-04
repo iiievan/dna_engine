@@ -1,5 +1,6 @@
 #pragma once
 
+// from glfw3.h
 #define DNAE_KEY_SPACE              32
 #define DNAE_KEY_APOSTROPHE         39  /* ' */
 #define DNAE_KEY_COMMA              44  /* , */
