@@ -7,6 +7,8 @@
 #include "dna_engine/Events/Event.h"
 #include "dna_engine/Events/ApplicationEvent.h"
 
+#include "dna_engine/ImGui/ImGuiLayer.h"
+
 namespace dna_engine
 {
 	class DNAE_API Application
@@ -28,6 +30,7 @@ namespace dna_engine
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 
 		LayerStack m_LayerStack;

@@ -112,6 +112,7 @@ project "Sandbox"
     {
         "dna_engine/src", 
         "dna_engine/vendor/spdlog/include",
+        "dna_engine/vendor", 
         "%{IncludeDir.glm}"         
     }
 
