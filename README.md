@@ -6,6 +6,6 @@ To build the project, you need:
 - delete folders ~/bin and ~/bin-int in the root directory of project deleteif they exist.
 - and just in case remove the solution file for VS - dna_engine.sln
 - unpack .zip to ~/vendor/bin/premake at the root of the project.
-- edit file GenerateProject for the actual version of visual studio.
+- edit file GenerateProject for the actual version of visual studio. (type vs2019 at the end)
 - run GenerateProject with Administrator rules.
 - run solution and run "rebuild all".
