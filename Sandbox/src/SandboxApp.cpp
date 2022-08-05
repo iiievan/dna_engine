@@ -1,6 +1,8 @@
 #include"dnae_pch.h"
 #include<dna_engine.h>
 
+#include "imgui/imgui.h"
+
 
 class ExampleLayer : public dna_engine::Layer
 {
@@ -13,6 +15,12 @@ public:
 	{
 		if(dna_engine::Input::IsKeyPressed(DNAE_KEY_TAB))
 			DNAE_TRACE("Tab Key is Pressed! (poll)");
+	}
+	void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hola, Amigo!");
+		ImGui::End();
 	}
 
 	void OnEvent(dna_engine::Event& event) override
@@ -35,7 +43,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new dna_engine::ImGuiLayer());
 	}
 
 	~Sandbox()
