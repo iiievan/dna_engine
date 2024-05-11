@@ -9,4 +9,4 @@
 	url = https://github.com/g-truc/glm
 [submodule "dna_engine/vendor/imgui"]
 	path = dna_engine/vendor/imgui
-	url = https://github.com/iiievan/imgui
+	url = https://github.com/iiievan/imgui.git
