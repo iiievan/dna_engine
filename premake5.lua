@@ -70,7 +70,8 @@ project "dna_engine"
     { 
         "DNAE_PLATFORM_WINDOWS",
         "DNAE_BUILD_DLL",
-        "GLFW_INCLUDE_NONE"
+        "GLFW_INCLUDE_NONE",
+        "IMGUI_API=__declspec(dllexport)"
     }
 
     postbuildcommands
@@ -127,7 +128,8 @@ project "Sandbox"
 
     defines 
     { 
-        "DNAE_PLATFORM_WINDOWS"
+        "DNAE_PLATFORM_WINDOWS",
+        "IMGUI_API=__declspec(dllimport)"
     }
     
     filter "configurations:Debug"
