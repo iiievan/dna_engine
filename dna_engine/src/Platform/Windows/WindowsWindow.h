@@ -4,6 +4,8 @@
 
 #include <GLFW/glfw3.h>
 
+#include "dna_engine/Renderer/GraphicsContext.h"
+
 namespace dna_engine {
 
 	class WindowsWindow : public Window
@@ -29,6 +31,7 @@ namespace dna_engine {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
