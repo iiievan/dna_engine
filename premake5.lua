@@ -70,7 +70,8 @@ project "dna_engine"
     { 
         "DNAE_PLATFORM_WINDOWS",
         "DNAE_BUILD_STATIC",
-        "GLFW_INCLUDE_NONE"
+        "GLFW_INCLUDE_NONE",
+        "_CRT_SECURE_NO_WARNINGS"
     }
     
     filter "configurations:Debug"
