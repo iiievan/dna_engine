@@ -24,9 +24,10 @@ include "dna_engine/vendor/imgui"
 
 project "dna_engine"
     location "dna_engine"
-    kind "SharedLib"
+    kind "StaticLib"
     language "C++"
-    staticruntime "off"
+    cppdialect "C++17"
+    staticruntime "on"
 
 
     targetdir ("bin/" ..outputdir.. "/%{prj.name}")
@@ -63,42 +64,36 @@ project "dna_engine"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
         systemversion "latest"
 
     defines 
     { 
         "DNAE_PLATFORM_WINDOWS",
-        "DNAE_BUILD_DLL",
-        "GLFW_INCLUDE_NONE",
-        "IMGUI_API=__declspec(dllexport)"
-    }
-
-    postbuildcommands
-    {
-        ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
+        "DNAE_BUILD_STATIC",
+        "GLFW_INCLUDE_NONE"
     }
     
     filter "configurations:Debug"
         defines "DNAE_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "DNAE_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "DNAE_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
-    staticruntime "off"
+    cppdialect "C++17"
+    staticruntime "on"
 
     targetdir ("bin/" ..outputdir.. "/%{prj.name}")
     objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
@@ -123,26 +118,25 @@ project "Sandbox"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
         systemversion "latest"
 
     defines 
     { 
         "DNAE_PLATFORM_WINDOWS",
-        "IMGUI_API=__declspec(dllimport)"
+        "DNAE_BUILD_STATIC"
     }
     
     filter "configurations:Debug"
         defines "DNAE_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "DNAE_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "DNAE_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
